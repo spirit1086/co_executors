@@ -1,6 +1,6 @@
 # Redmine Co-executors plugin  
   
-  The plugin allows you to assign a task to multiple participants  
+  The plugin allows you to assign a issue to multiple participants  
     
     
 # Installation and Setup  
