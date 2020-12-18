@@ -1,0 +1,6 @@
+<% if @project.module_enabled?(:co_participants) %>
+<p id="issue_users_id-box">   
+  <%= label_tag('issue[users_id]', l(:co_part_select_user) ) %>
+  <%= select_tag "issue[users_id]", options_for_select(options, :selected => selected),{:prompt => l(:co_part_select_user),:multiple => true,:disabled=>disabled_status} %> 
+</p>   
+<% end %>

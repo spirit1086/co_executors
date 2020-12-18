@@ -1,0 +1,6 @@
+<% if controller_name=='issues' %>
+    <% content_for :header_tags do %>
+        <%= stylesheet_link_tag "co_participants", plugin: "co_participants" %>
+        <%= javascript_include_tag "co_participants", plugin: "co_participants" %>
+    <% end %>
+<% end %>

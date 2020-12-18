@@ -1,0 +1,9 @@
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #5897fb !important;
+    color: white !important;
+}
+
+.display-none
+{
+   display: none; 
+}

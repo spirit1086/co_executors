@@ -1,0 +1,18 @@
+<%
+    #params = [[:f, ["status_id", "assigned_to_id", "project.status"]], [:op, {"status_id"=>"o", "issue_user"=>"=", "project.status"=>"="}], [:v, {"status_id"=>[""], "issue_user"=>["me"], "project.status"=>["1"]}], [:c, [:project, :tracker, :status, :subject]], [:sort, "project,priority:desc,updated_on:desc"], [:set_filter, 1]]
+    current_user_id = User.current.id
+    co_participants = Issue.joins("INNER JOIN #{IssueUser.table_name} 
+                                           ON #{IssueUser.table_name}.issue_id = #{Issue.table_name}.id") 
+                           .where("#{IssueUser.table_name}.user_id= #{current_user_id}")
+                           .order(:created_on)
+%>
+<h3>
+    <%= l(:co_participants_me) %>
+    (<%= co_participants.count %>)
+</h3>
+
+<% if co_participants.count > 0 %>
+    <%= render :partial => 'my/list', :locals => {:issues => co_participants.first(15)} unless co_participants.empty? %>
+<% else %>
+    <p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>

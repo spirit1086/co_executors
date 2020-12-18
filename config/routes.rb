@@ -1,0 +1,1 @@
+post '/is-show-co-participants', to:'co_participants#is_show',as:'is_how_co_participants'

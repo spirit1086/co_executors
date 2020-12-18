@@ -1,0 +1,7 @@
+ru:
+    assigned_users: "Соисполнители"
+    permission_edit_own_issues: "Редактирование созданных и назначенных(соучастники) задач"
+    co_part_select_user: "Выберите соисполнителей задачи"
+    co_part_users: "Соисполнители задачи"
+    co_participants_me: "Соисполнители задач"
+    project_module_co_participants: "Соисполнители"
